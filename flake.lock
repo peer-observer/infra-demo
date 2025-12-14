@@ -135,11 +135,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1765624107,
-        "narHash": "sha256-0CPv/09FFx1K8gRJ8ORd1wh5P8mLGbvSPb1kSlfK/Z4=",
+        "lastModified": 1765711933,
+        "narHash": "sha256-IrFHrpq58cBQXOhmsLWncM/W0j1h7UZkVV5a6AQjo+Y=",
         "owner": "0xB10C",
         "repo": "peer-observer-infra-library",
-        "rev": "ee6d858948ec5452eb87891beca03907456ea5f7",
+        "rev": "9f959080508791caf39d4531102598600ac5e9fe",
         "type": "github"
       },
       "original": {
