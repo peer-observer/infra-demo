@@ -27,20 +27,20 @@
     "b10c-nix": {
       "inputs": {
         "nixpkgs": [
-          "peer-observer-infra-library",
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1765558983,
-        "narHash": "sha256-MQahEeyrVqun7rcKS03uRatrJ9bN5GEpPIMkJAxFYFQ=",
+        "lastModified": 1765799862,
+        "narHash": "sha256-R+34H1ggtKRh/AYFS/8lh7O1Iv5kz436PatfTfuOMZs=",
         "owner": "0xb10c",
         "repo": "nix",
-        "rev": "92c50bfced4b6b9e80ff6949730ad875e64a4978",
+        "rev": "1922b1477f925a09a38b2ad3ba56500e2eb78961",
         "type": "github"
       },
       "original": {
         "owner": "0xb10c",
+        "ref": "2025-12-peer-observer-protobuf-refactor",
         "repo": "nix",
         "type": "github"
       }
@@ -129,7 +129,9 @@
     "peer-observer-infra-library": {
       "inputs": {
         "agenix": "agenix",
-        "b10c-nix": "b10c-nix",
+        "b10c-nix": [
+          "b10c-nix"
+        ],
         "nixpkgs": [
           "nixpkgs"
         ]
@@ -150,6 +152,7 @@
     },
     "root": {
       "inputs": {
+        "b10c-nix": "b10c-nix",
         "disko": "disko",
         "nixpkgs": "nixpkgs",
         "peer-observer-infra-library": "peer-observer-infra-library"
