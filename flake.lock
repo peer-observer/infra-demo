@@ -27,20 +27,20 @@
     "b10c-nix": {
       "inputs": {
         "nixpkgs": [
+          "peer-observer-infra-library",
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1765799862,
-        "narHash": "sha256-R+34H1ggtKRh/AYFS/8lh7O1Iv5kz436PatfTfuOMZs=",
+        "lastModified": 1765816449,
+        "narHash": "sha256-6Y/bKPgxDgF/YVUK5NNODHNO+KHdfHUnQyY69NcBeds=",
         "owner": "0xb10c",
         "repo": "nix",
-        "rev": "1922b1477f925a09a38b2ad3ba56500e2eb78961",
+        "rev": "b803305e452d1b9d70cf183e4915ae5f456d6e39",
         "type": "github"
       },
       "original": {
         "owner": "0xb10c",
-        "ref": "2025-12-peer-observer-protobuf-refactor",
         "repo": "nix",
         "type": "github"
       }
@@ -129,30 +129,27 @@
     "peer-observer-infra-library": {
       "inputs": {
         "agenix": "agenix",
-        "b10c-nix": [
-          "b10c-nix"
-        ],
+        "b10c-nix": "b10c-nix",
         "nixpkgs": [
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1765711933,
-        "narHash": "sha256-IrFHrpq58cBQXOhmsLWncM/W0j1h7UZkVV5a6AQjo+Y=",
-        "owner": "0xB10C",
-        "repo": "peer-observer-infra-library",
-        "rev": "9f959080508791caf39d4531102598600ac5e9fe",
+        "lastModified": 1765820079,
+        "narHash": "sha256-QGJNsw71FYWfZ4xB121rnWhLeJ0ad6hON77mZgMAKq8=",
+        "owner": "peer-observer",
+        "repo": "infra-library",
+        "rev": "f09b95f3a328e06e60a23d75a8d205b85a098986",
         "type": "github"
       },
       "original": {
-        "owner": "0xB10C",
-        "repo": "peer-observer-infra-library",
+        "owner": "peer-observer",
+        "repo": "infra-library",
         "type": "github"
       }
     },
     "root": {
       "inputs": {
-        "b10c-nix": "b10c-nix",
         "disko": "disko",
         "nixpkgs": "nixpkgs",
         "peer-observer-infra-library": "peer-observer-infra-library"

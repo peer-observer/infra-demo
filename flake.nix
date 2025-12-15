@@ -3,14 +3,9 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.11";
-    b10c-nix = {
-      url = "github:0xb10c/nix?ref=2025-12-peer-observer-protobuf-refactor";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     peer-observer-infra-library = {
-      url = "github:0xB10C/peer-observer-infra-library";
+      url = "github:peer-observer/infra-library";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.b10c-nix.follows = "b10c-nix";
     };
     disko = {
       url = "github:nix-community/disko";
@@ -23,7 +18,6 @@
       self,
       nixpkgs,
       peer-observer-infra-library,
-      b10c-nix,
       disko,
     }:
     let
