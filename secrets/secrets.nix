@@ -20,6 +20,11 @@ in
     hal
     b10c
   ];
+  # only present for hal, as we only expose the NATS server on hal
+  "extractor-nats-password-hal.age".publicKeys = [
+    hal
+    b10c
+  ];
 
   # len
   "wireguard-private-key-len.age".publicKeys = [

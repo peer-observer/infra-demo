@@ -64,11 +64,15 @@ in
         };
       };
 
-      extraConfig = { };
+      extraConfig = {
+
+
+      };
       extraModules = [
         disko.nixosModules.disko
         ./hosts/hal/disko.nix
         ./hosts/hal/hardware-configuration.nix
+        ./hosts/hal/exposed-nats.nix
       ];
     };
 
