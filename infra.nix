@@ -66,7 +66,6 @@ in
 
       extraConfig = {
 
-
       };
       extraModules = [
         disko.nixosModules.disko

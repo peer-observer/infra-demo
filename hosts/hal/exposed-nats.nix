@@ -1,6 +1,5 @@
 { config, pkgs, ... }:
 
-
 {
 
   # On host "hal", we want to expose the NATS server to external users.
@@ -11,9 +10,30 @@
       authorization = {
         users = [
           # can publish
-          { user = "peerobserver-extractor"; password = "$2a$11$VIr5naSP6BqinPhD/1j54.cB3q7ozz5samciq/e5SJjOihHVO1h4i"; permissions = { publish = { allow = ">"; }; subscribe = { deny = ">"; }; }; }
+          {
+            user = "peerobserver-extractor";
+            password = "$2a$11$VIr5naSP6BqinPhD/1j54.cB3q7ozz5samciq/e5SJjOihHVO1h4i";
+            permissions = {
+              publish = {
+                allow = ">";
+              };
+              subscribe = {
+                deny = ">";
+              };
+            };
+          }
           # can subscribe
-          { user = "peerobserver-tool"; permissions = { publish = { deny = ">"; }; subscribe = { allow = ">"; }; }; }
+          {
+            user = "peerobserver-tool";
+            permissions = {
+              publish = {
+                deny = ">";
+              };
+              subscribe = {
+                allow = ">";
+              };
+            };
+          }
         ];
       };
       no_auth_user = "peerobserver-tool";
