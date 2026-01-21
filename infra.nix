@@ -159,6 +159,15 @@ in
           # For a Let's Encrypt ACME certificate, accept the terms.
           security.acme.acceptTerms = true;
           security.acme.defaults.email = "demo-peer-observer-acme@b10c.me";
+
+          # Proxy hal's NATS server via NGINX stream to the public
+          services.nginx.streamConfig = ''
+            server {
+              listen 0.0.0.0:45324;
+              proxy_pass 10.20.0.1:5882;
+            }
+          '';
+          networking.firewall.interfaces.enp6s16.allowedTCPPorts = [ 45324 ];
         };
 
         extraModules = [

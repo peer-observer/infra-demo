@@ -42,4 +42,13 @@
     };
   };
 
+  # Proxy the NATS server via NGINX stream to the web server
+  services.nginx.streamConfig = ''
+    server {
+      listen 10.20.0.1:5882;
+      proxy_pass 127.0.0.1:4222;
+    }
+  '';
+  networking.firewall.interfaces.wg-peerobserver.allowedTCPPorts = [ 5882 ];
+
 }
