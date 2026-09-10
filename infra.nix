@@ -8,6 +8,14 @@
 let
   mkPkgs = system: import nixpkgs { inherit system; };
   customBitcoind = { system, overrides }: (infra-library.lib system).mkCustomBitcoind overrides;
+
+  # Records address-relay messages and connections with their handshake. Used on
+  # the nodes that should archive addr-relay, see
+  # https://github.com/peer-observer/infra-library/pull/247.
+  addrRelayArchiver = {
+    baseName = "demo";
+    addrRelay.enable = true;
+  };
 in
 {
 
@@ -59,6 +67,8 @@ in
 
       peer-observer.extractors.logs.enable = true;
 
+      peer-observer.tools.archiver = addrRelayArchiver;
+
       extraConfig = { };
       extraModules = [
         disko.nixosModules.disko
@@ -106,6 +116,8 @@ in
           logsToKeep = 3;
         };
       };
+
+      peer-observer.tools.archiver = addrRelayArchiver;
 
       extraConfig = { };
       extraModules = [
