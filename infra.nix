@@ -57,6 +57,14 @@ in
         detailedLogging = {
           logsToKeep = 3;
         };
+        package = customBitcoind {
+          system = "x86_64-linux";
+          overrides = {
+            gitCommit = "1b08b538543c98976f2f527abf0dac848d46d35e";
+            gitBranch = "2026-10-dont-evcit-on-frequent-reconnect";
+            gitURL = "https://github.com/0xb10c/bitcoin.git";
+          };
+        };
 
         net = {
           useTor = true;
@@ -92,28 +100,19 @@ in
       samply-continuous-profiling = true;
 
       bitcoind = {
-        # package = customBitcoind {
-        #   system = "x86_64-linux";
-        #   overrides = {
-        #     # https://github.com/bitcoin/bitcoin/pull/35550
-        #     gitCommit = "abc33ff043f07226d1f1f88a1d1ddce8dccdd930";
-        #     gitBranch = "2026-06-addrman-branch";
-        #     gitURL = "https://github.com/brunoerg/bitcoin.git";
-        #   };
-        # };
         net = {
           useTor = true;
           useI2P = true;
-          useASMap = true;
+          useASMap = false;
         };
         banlistScript = ''
-bitcoin-cli setban 143.20.137.0/24      add 31536000  # LinkingLion
-bitcoin-cli setban 31.58.215.0/24       add 31536000  # LinkingLion
-bitcoin-cli setban 87.229.79.0/24       add 31536000  # LinkingLion
-bitcoin-cli setban 2602:f5c0:0:ace::/64 add 31536000  # LinkingLion
-bitcoin-cli setban 104.234.118.2/32     add 31536000  # LinkingLion
-bitcoin-cli setban 69.17.52.1/32        add 31536000  # LinkingLion
-	'';
+          bitcoin-cli setban 143.20.137.0/24      add 31536000  # LinkingLion
+          bitcoin-cli setban 31.58.215.0/24       add 31536000  # LinkingLion
+          bitcoin-cli setban 87.229.79.0/24       add 31536000  # LinkingLion
+          bitcoin-cli setban 2602:f5c0:0:ace::/64 add 31536000  # LinkingLion
+          bitcoin-cli setban 104.234.118.2/32     add 31536000  # LinkingLion
+          bitcoin-cli setban 69.17.52.1/32        add 31536000  # LinkingLion
+          	'';
         detailedLogging = {
           logsToKeep = 3;
         };
