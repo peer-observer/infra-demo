@@ -75,7 +75,7 @@ in
 
       peer-observer.extractors.logs.enable = true;
 
-      peer-observer.tools.archiver = addrRelayArchiver;
+      peer-observer.tools.archiver = addrRelayArchiver // { lowData.enable = true; };
 
       extraConfig = { };
       extraModules = [
@@ -118,7 +118,7 @@ in
         };
       };
 
-      peer-observer.tools.archiver = addrRelayArchiver;
+      peer-observer.tools.archiver = addrRelayArchiver // { lowData.enable = true; };
 
       extraConfig = { };
       extraModules = [
