@@ -29,11 +29,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792707144,
-        "narHash": "sha256-ePUD56eM7q4w3rnSR8Jm543YCWM6YgiJVootz9rMmdU=",
+        "lastModified": 1794865318,
+        "narHash": "sha256-RmPHDWDdMd4/gezCDP8UKEoLTs9Gg1ulEFZj1v6UXFQ=",
         "owner": "0xb10c",
         "repo": "nix",
-        "rev": "61d18b4cfb004f988a147ab2bb401945e18ea2a5",
+        "rev": "3898fcbb87c8f88068ad423bb219566d29a888a3",
         "type": "github"
       },
       "original": {
@@ -49,11 +49,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792526520,
-        "narHash": "sha256-3hSJlv8mUVnZPMWK2+CM7a9O+nR6Z4mCh27NfLCmTPc=",
+        "lastModified": 1794328522,
+        "narHash": "sha256-h2BYMW4nTFpIqnMd8gwAPFmJAp/1wWLQ6vT0NfL5qt4=",
         "owner": "nix-community",
         "repo": "disko",
-        "rev": "cedd626e11b635470fa6f9fdb8ad79b0075dd7f9",
+        "rev": "1dd30c29c88d99ce295f15e27f93c49bc5fbae07",
         "type": "github"
       },
       "original": {
@@ -71,11 +71,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793380974,
-        "narHash": "sha256-+PNKnpeJW1YLQC9XV6NoC83xoX0eMhEUPENEv2FtEXk=",
+        "lastModified": 1795041201,
+        "narHash": "sha256-cDF+bRyDReLRUla6NyEERCUOWm4SzR+6Qrn7n+tnkQk=",
         "owner": "peer-observer",
         "repo": "infra-library",
-        "rev": "77241a09436460e1be9cbe46487332e2b081d1cb",
+        "rev": "4caa62292fdef24aa55e40c94ccc87976e9ff174",
         "type": "github"
       },
       "original": {
@@ -86,11 +86,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1793410479,
-        "narHash": "sha256-HzgjxrLY4AEc0044ZuM5CHbLSWLZgDlay1idmzvvpJs=",
+        "lastModified": 1794872590,
+        "narHash": "sha256-E+XLAfnC7+bdr4qlEgRv6cdGmiqTU5oeFNKCha7epqQ=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "fa1373130d5a21c040a47c5dbe1913d59ed91808",
+        "rev": "f68407657ad294471eb4b2e65d193df26edf729f",
         "type": "github"
       },
       "original": {
